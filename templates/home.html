@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <section class="unified-panel welcome-landing-container">
+        <div class="welcome-landing-content">
+            <h1 class="welcome-landing-heading">Welcome to Your Digital Learning Journey!</h1>
+            <p class="welcome-landing-mission">Simple lessons. Safe practice. Stronger together.</p>
+        </div>
+    </section>
+
+    <div class="dashboard-features-grid">
+        
+        <a href="/lessons" class="dashboard-nav-card theme-pastel-blue">
+            <span class="dashboard-card-icon">📖</span>
+            <span class="dashboard-card-label">Start Learning</span>
+        </a>
+
+        <a href="/community-meetings" class="dashboard-nav-card theme-pastel-green">
+            <span class="dashboard-card-icon">👥</span>
+            <span class="dashboard-card-label">Join Community Meetings</span>
+        </a>
+
+        <a href="/register-volunteer" class="dashboard-nav-card theme-pastel-purple">
+            <span class="dashboard-card-icon">💖</span>
+            <span class="dashboard-card-label">Volunteer With Us</span>
+        </a>
+
+        <a href="/helpline" class="dashboard-nav-card theme-pastel-orange">
+            <span class="dashboard-card-icon">🎧</span>
+            <span class="dashboard-card-label">Get Help</span>
+        </a>
+
+    </div>
+
+{% endblock %}

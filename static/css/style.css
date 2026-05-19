@@ -459,3 +459,156 @@ a {
 .auth-inline-link:hover {
     color: #1e293b;
 }
+
+/* HOMEPAGE WELCOME LANDING ALIGNMENT MAPPING */
+
+.welcome-landing-container {
+    padding: 2.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;               
+}
+
+.welcome-landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 100rem;                
+}
+
+.welcome-landing-heading {
+    font-size: 2.5rem;               
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.welcome-landing-mission {
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: #334155;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   HEADER NAVIGATION ACCESSIBILITY IMPROVEMENTS
+   ========================================================================== */
+
+.accessibility-text-controls {
+    display: inline-flex;
+    background-color: #1e293b;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+}
+
+.text-size-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-weight: 700;
+    cursor: pointer;
+    min-height: auto !important;
+    padding: 0.25rem 0.75rem;
+    transition: color 0.15s ease;
+}
+
+.text-sm-indicator { font-size: 0.875rem; }
+.text-md-indicator { font-size: 1.125rem; }
+.text-lg-indicator { font-size: 1.375rem; }
+
+.accessibility-text-controls .active-size,
+.text-size-btn:hover {
+    color: #f4dc40;
+}
+
+.language-select-wrapper {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1e293b;
+    border-radius: 0.5rem;
+    padding: 0 0.75rem;
+    color: #ffffff;
+    font-size: 1.125rem;
+}
+
+.language-dropdown-selector {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.language-dropdown-selector option {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   CENTRAL FEATURES GRID & PASTEL PALETTE
+   ========================================================================== */
+
+.dashboard-features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: -0.5rem;
+
+}
+
+@media (min-width: 640px) {
+    .dashboard-features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-features-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.dashboard-nav-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dashboard-nav-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card-icon {
+    font-size: 3.5rem;                /* Oversized accessible graphic indicators */
+}
+
+.dashboard-card-label {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+/* Pastel Theme Colorways (High text contrast preservation) */
+.theme-pastel-blue   { background-color: #2563eb !important; color: #ffffff !important; }
+.theme-pastel-green  { background-color: #16a34a !important; color: #ffffff !important; }
+.theme-pastel-purple { background-color: #7c3aed !important; color: #ffffff !important; }
+.theme-pastel-orange { background-color: #ea580c !important; color: #ffffff !important; }
+
+.theme-pastel-blue:hover   { background-color: #1d4ed8 !important; }
+.theme-pastel-green:hover  { background-color: #15803d !important; }
+.theme-pastel-purple:hover { background-color: #6d28d9 !important; }
+.theme-pastel-orange:hover { background-color: #c2410c !important; }

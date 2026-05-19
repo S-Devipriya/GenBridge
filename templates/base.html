@@ -11,12 +11,24 @@
 </head>
 <body>
     <header class="header-bar">
-        <div class="brand-logo">☀ GenBridge</div>
+        <a href="/" class="brand-logo">☀ GenBridge</a>
         
         <nav class="nav-links">
-            <a href="/community-meetings" class="nav-btn">Join Online Community Meetings</a>
-            <a href="/learning-paths" class="nav-btn">Start Learning Path</a>
-            <a href="/helpline" class="nav-btn">Call Helpline</a>
+            <div class="accessibility-text-controls">
+                <button onclick="changeFontSize('small')" class="text-size-btn text-sm-indicator">A</button>
+                <button onclick="changeFontSize('normal')" class="text-size-btn text-md-indicator active-size">A</button>
+                <button onclick="changeFontSize('large')" class="text-size-btn text-lg-indicator">A</button>
+            </div>
+
+            <div class="language-select-wrapper">
+                <span class="language-icon">🌐</span>
+                <select id="language-picker" class="language-dropdown-selector">
+                    <option value="en" selected>English</option>
+                    <option value="ml">മലയാളം (Malayalam)</option>
+                    <option value="hi">हिन्दी (Hindi)</option>
+                </select>
+            </div>
+
             <a href="/login" class="nav-btn">Log In</a>
         </nav>
     </header>

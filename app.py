@@ -43,11 +43,23 @@ class Session(db.Model):
 
 from flask import Flask, render_template, request
 
-# 1. HOME LAYOUT (Knowledge Hub View)
+# 1. ROOT WELCOME SCREEN
 @app.route('/')
+def welcome():
+    """Renders the initial mission welcome statement with the single entry point button."""
+    return render_template('welcome.html')
+
+# 2. CENTRAL HOMEPAGE DASHBOARD (The new home.html)
+@app.route('/home')
 def home():
-    """Renders the central knowledge hub showing your 4 learning cards side-by-side."""
-    return render_template('knowledge_hub.html')
+    """Renders the colorful 4-button feature dashboard navigation panel."""
+    return render_template('home.html')
+
+# 3. RENAMED LESSONS SHELF
+@app.route('/lessons')
+def lessons():
+    """Renders the 3-column learning card index workspace."""
+    return render_template('lessons.html')
 
 # 2. HELPLINE LAYOUT
 @app.route('/helpline')
