@@ -5,10 +5,10 @@ This application is developed for participation in Digital Skills to Succeed (DS
 
 Gemini 3 Flash was used for majority of AI coding.
 
-Team members:
-Vanshikha Sharma
-Palak Burman
-S Devipriya
+**Team members**
+- Vanshikha Sharma
+- Palak Burman
+-  Devipriya
 
-Guide
-Dr. Jyotsna Dikshit
+**Guide**
+- Dr. Jyotsna Dikshit
