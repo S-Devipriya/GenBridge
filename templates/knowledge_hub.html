@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <section class="unified-panel search-box-container">
+        <label for="hub-search" class="search-title-text">What do you want to learn to do today?</label>
+        <form action="/search" method="GET" class="search-horizontal-form">
+            <input type="text" id="hub-search" name="q" placeholder="Try typing 'banking', 'whatsapp', or 'video call'..." class="search-text-input">
+            <button type="submit" class="search-action-btn">Search</button>
+        </form>
+    </section>
+
+    <div class="hub-content-shelf">
+        <h3 class="hub-main-title">Start with our recommended lessons</h3>
+        
+        <div class="three-column-lessons-grid margin-bottom-modifier">
+            <article class="unified-panel learning-card">
+                <div class="card-media-frame">
+                    <span class="media-indicator-icon">▶</span>
+                </div>
+                <div class="card-text-block">
+                    <span class="badge-tag welcome-tag">Welcome</span>
+                    <h4 class="card-main-heading">Welcome to GenBridge</h4>
+                    <p class="card-body-prose">Watch this short welcome video to see how easily you can navigate our website and start learning.</p>
+                </div>
+                <div class="card-button-anchor">
+                    <button class="card-primary-btn">Watch Video</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="three-column-lessons-grid">
+            
+            <article class="unified-panel learning-card">
+                <div class="card-media-frame">
+                    <span class="media-indicator-icon">📄</span>
+                </div>
+                <div class="card-text-block">
+                    <span class="badge-tag read-tag">Read a Guide</span>
+                    <h4 class="card-main-heading">What is Logging in?</h4>
+                    <p class="card-body-prose">This guide covers the basics of logging in to websites, including how to create a username and password and how to stay safe while logging in online.</p>
+                </div>
+                <div class="card-button-anchor">
+                    <button class="card-primary-btn">Read Guide</button>
+                </div>
+            </article>
+
+            <article class="unified-panel learning-card">
+                <div class="card-media-frame">
+                    <span class="media-indicator-icon">▶</span>
+                </div>
+                <div class="card-text-block">
+                    <span class="badge-tag watch-tag">Watch a Video</span>
+                    <h4 class="card-main-heading">How to join a meeting on GoogleMeet</h4>
+                    <p class="card-body-prose">Learn how to join a Google Meet meeting from your device.</p>
+                </div>
+                <div class="card-button-anchor">
+                    <button class="card-primary-btn">Watch Video</button>
+                </div>
+            </article>
+
+            <article class="unified-panel learning-card">
+                <div class="card-media-frame">
+                    <span class="media-indicator-icon">🚀</span>
+                </div>
+                <div class="card-text-block">
+                    <span class="badge-tag try-tag">Try it Safely</span>
+                    <h4 class="card-main-heading">Practice Sending a Digital Payment</h4>
+                    <p class="card-body-prose">A fake interactive wallet screen. Type dummy values and try keys securely without using any real money.</p>
+                </div>
+                <div class="card-button-anchor">
+                    <a href="/sandbox/banking" class="card-primary-link">Start Activity</a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="hub-pagination-row">
+            <a href="?page=2" class="hub-btn">See More Lessons</a>
+        </div>
+    </div>
+
+{% endblock %}

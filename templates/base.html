@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenBridge - Digital Literacy Platform</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header-bar">
+        <div class="brand-logo">☀ GenBridge</div>
+        
+        <nav class="nav-links">
+            <a href="/community-meetings" class="nav-btn">Join Online Community Meetings</a>
+            <a href="/learning-paths" class="nav-btn">Start Learning Path</a>
+            <a href="/helpline" class="nav-btn">Call Helpline</a>
+            <a href="/login" class="nav-btn">Log In</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer-bar">
+        <p>GenBridge Eco-Learning System. Designed explicitly for digital accessibility.</p>
+        <p>Any Queries or Suggestions? Contact us at <a href="mailto:info@genbridge.org">info@genbridge.org</a></p>
+        <a href="/register-volunteer">Register as Volunteer</a>
+    </footer>
+
+</body>
+</html>

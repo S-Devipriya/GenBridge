@@ -1,0 +1,461 @@
+/* ACCESSIBILITY & LAYOUT SPECIFICATIONS */
+
+body {
+    font-size: 1.25rem;             
+    background-color: #f8fafc;       
+    color: #0f172a;                   
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+input, 
+button, 
+a {
+    min-height: 56px;                
+    box-sizing: border-box;
+}
+
+/* HEADER & NAVIGATION AREA */
+
+.header-bar {
+    background-color: #0f172a;  
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+    color: #f4dc40;               
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;           
+}
+
+/* Top Bar Button */
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: background-color 0.15s ease;
+    background-color: #f4dc40;   
+    color: #0f172a;
+}
+
+.nav-btn:hover {
+    background-color: #ebd128;
+}
+
+/* MAIN CONTENT ARCHITECTURE */
+
+.main-container {
+    width: 100%;
+    max-width: 90rem;                 
+    margin: 0 auto;
+    padding: 1rem;             
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;             
+    gap: 0.5rem;                      
+}
+
+/* The Uniform Panel Paradigm (Shared by all secondary cards) */
+.unified-panel {
+    background-color: #ffffff !important;  
+    border: none !important;              
+    border-radius: 1rem;                  
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); 
+    box-sizing: border-box;
+}
+
+/* SYSTEM FOOTER AREA */
+
+.footer-bar {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;                
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.footer-bar a {
+    color: #94a3b8;                   
+    text-decoration: underline;               
+    display: inline-block;
+    align-items: center;
+    transition: color 0.15s ease;
+    padding: 0 0.25rem;
+    min-height: auto;
+}
+
+.footer-bar a:hover,
+.footer-bar a:focus {
+    color: #7d8a9c;                  
+    text-decoration: none;            
+}
+
+/* GENBRIDGE SEARCH BAR COMPONENT */
+
+.search-box-container {
+    padding: 1rem;                    
+    width: 100%;                      
+}
+
+.search-title-text {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.search-horizontal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .search-horizontal-form {
+        flex-direction: row;
+    }
+}
+
+.search-text-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #0f172a;
+    background-color: #f8fafc;
+    border: 2px solid #cbd5e1;
+    border-radius: 0.75rem;
+}
+
+.search-action-btn {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 0 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    margin:0;
+}
+
+.search-action-btn:hover {
+    background-color: #1e293b;
+}
+
+.hub-content-shelf {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hub-main-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.three-column-lessons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+@media (min-width: 640px) {
+    .three-column-lessons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .three-column-lessons-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+.margin-bottom-modifier {
+    margin-bottom: 0.5rem;
+}
+
+
+/* LEARNING CARD ARCHITECTURE */
+
+.learning-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%;
+}
+
+.card-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.card-main-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.card-body-prose {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* VIDEO CONTENT THUMBNAIL PLACEHOLDER */
+
+.card-media-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #e2e8f0;       
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.media-indicator-icon {
+    font-size: 1.5rem;
+    color: #64748b;             
+}
+
+/* FLAT CATEGORY BADGES */
+
+.badge-tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    width: max-content;
+}
+
+.welcome-tag { background-color: #fef3c7; color: #92400e; }
+.read-tag    { background-color: #f3e8ff; color: #6b21a8; }
+.watch-tag   { background-color: #dbeafe; color: #1e40af; }
+.try-tag     { background-color: #ffedd5; color: #9a3412; }
+
+.card-button-anchor {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.card-primary-btn,
+.card-primary-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.card-primary-btn:hover,
+.card-primary-link:hover {
+    background-color: #1e293b;
+}
+
+/* PAGINATION */
+
+.hub-pagination-row {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hub-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 20rem;
+    background-color: #f4dc40;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: background-color 0.15s ease;
+}
+
+.hub-btn:hover {
+    background-color: #ebd128;
+}
+
+/* HELPLINE SCREEN PRESENTATION LAYER */
+
+.helpline-container {
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px; 
+}
+
+.helpline-content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 36rem;
+}
+
+.helpline-main-heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.helpline-subtext {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.helpline-call-target {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #065f46;       
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.75rem;              
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.15s ease;
+}
+
+.helpline-call-target:hover {
+    background-color: #064e3b;
+}
+
+.helpline-availability {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #64748b;
+    margin: 0;
+}
+
+/* UNIFORM SINGLE-CARD AUTHENTICATION PRESENTATION LAYER */
+
+.auth-container {
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px; 
+}
+
+.auth-content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;            
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 32rem;                
+    text-align: center;
+}
+
+.auth-main-heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.auth-subtext {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.auth-vertical-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;   
+}
+
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label-text {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.auth-switch-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #475569;
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+.auth-inline-link {
+    color: #0f172a;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.auth-inline-link:hover {
+    color: #1e293b;
+}
